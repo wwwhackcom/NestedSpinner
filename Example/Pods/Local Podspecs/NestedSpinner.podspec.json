@@ -1,0 +1,22 @@
+{
+  "name": "NestedSpinner",
+  "version": "0.1.0",
+  "summary": "A short description of NestedSpinner.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/wwwhackcom/NestedSpinner",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wwwhackcom": "51991391@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/wwwhackcom/NestedSpinner.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "NestedSpinner/Classes/**/*"
+}

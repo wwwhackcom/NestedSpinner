@@ -22,7 +22,7 @@ pod 'NestedSpinner'
 
 ## Author
 
-wwwhackcom, 51991391@qq.com
+Nick Wang, wwwhackcom@qq.com
 
 ## License
 

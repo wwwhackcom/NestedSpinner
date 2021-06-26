@@ -2,11 +2,12 @@
 //  AppDelegate.swift
 //  NestedSpinner
 //
-//  Created by wwwhackcom on 06/25/2021.
-//  Copyright (c) 2021 wwwhackcom. All rights reserved.
+//  Created by Nick on 8/06/21.
+//  Copyright © 2021 Nick Wang. All rights reserved.
 //
 
 import UIKit
+import NestedSpinner
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        NestedSpinnerAppearance.customisedStyle()
         return true
     }
 

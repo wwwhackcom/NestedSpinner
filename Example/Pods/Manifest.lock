@@ -1,0 +1,16 @@
+PODS:
+  - NestedSpinner (0.1.0)
+
+DEPENDENCIES:
+  - NestedSpinner (from `../`)
+
+EXTERNAL SOURCES:
+  NestedSpinner:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NestedSpinner: 982066cb08df79827826142b661d30049a428853
+
+PODFILE CHECKSUM: e437ad54e6e818dece607b797caa7a8a784b96fa
+
+COCOAPODS: 1.10.1

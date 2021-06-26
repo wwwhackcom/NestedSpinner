@@ -1,0 +1,6 @@
+framework module NestedSpinner {
+  umbrella header "NestedSpinner-umbrella.h"
+
+  export *
+  module * { export * }
+}
