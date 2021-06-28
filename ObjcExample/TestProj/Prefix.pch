@@ -1,0 +1,16 @@
+//
+//  Prefix.pch
+//  TestProj
+//
+//  Created by Nick Wang on 28/06/21.
+//  Copyright © 2021 Nick Wang. All rights reserved.
+//
+
+#ifndef Prefix_h
+#define Prefix_h
+
+#import "TestProj-Swift.h"
+@import NestedSpinner;
+
+
+#endif /* Prefix_h */

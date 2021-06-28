@@ -81,7 +81,10 @@ public class NestedSpinnerBundle: NSObject {
         #if SWIFT_PACKAGE
         return Bundle.module
         #else
-        return Bundle(for: NestedSpinnerView.self)
+        let podBundle = Bundle(for: NestedSpinnerView.self)
+        guard let url = podBundle.url(forResource: "NestedSpinner", withExtension: "bundle") else { return podBundle }
+        guard let bundle = Bundle(url: url) else { return podBundle }
+        return bundle
         #endif
     }
     
