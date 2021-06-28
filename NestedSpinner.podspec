@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NestedSpinner'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'A Customised Nested Spinner for iOS'
 
 # This description is used to generate tags and improve search results.
@@ -35,6 +35,8 @@ Pod::Spec.new do |s|
   
   s.swift_version = '5.0'
   s.platform = :ios, "9.0"
+  
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
   
   s.resource_bundles = {
     'NestedSpinner' => ['NestedSpinner/Assets/*.xcassets']
