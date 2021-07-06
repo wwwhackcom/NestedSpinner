@@ -124,7 +124,7 @@ extension NestedSpinnerAdapter: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedRowIndices.removeAll()
         selectedRowIndices.insert(indexPath)
-        delegate?.selectAction(index: indexPath.row, value: getSubItemTitle(indexPath), userdata: getSubItem(indexPath))
+        delegate?.selectAction(indexPath: indexPath, value: getSubItemTitle(indexPath), userdata: getSubItem(indexPath))
     }
     
     public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -277,7 +277,7 @@ extension NestedSpinnerAdapter: NestedGroupItemCellDelegate {
 
 protocol TableViewDelegate: AnyObject {
     
-    func selectAction(index: Int, value: String, userdata: AnyObject?)
+    func selectAction(indexPath: IndexPath, value: String, userdata: AnyObject?)
     
     func selectItem(at indexPath: IndexPath?, animated: Bool, scrollPosition: UITableView.ScrollPosition)
     

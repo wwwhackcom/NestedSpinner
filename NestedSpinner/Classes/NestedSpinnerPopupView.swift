@@ -510,8 +510,8 @@ extension NestedSpinnerPopupView {
 //MARK: - TableViewDelegate
 extension NestedSpinnerPopupView: TableViewDelegate {
     
-    func selectAction(index: Int, value: String, userdata: AnyObject?) {
-        selectionAction?(index, value, userdata)
+    func selectAction(indexPath: IndexPath, value: String, userdata: AnyObject?) {
+        selectionAction?(indexPath, value, userdata)
         hide()
     }
     

@@ -56,7 +56,7 @@ import UIKit
 public typealias AppearanceCustomisedClosure = () -> Void
 public typealias AnchorTapAction = () -> Void
 public typealias CancelAction = () -> Void
-public typealias SelectionAction = (Int, String, AnyObject?) -> Void
+public typealias SelectionAction = (IndexPath, String, AnyObject?) -> Void
 public typealias ReloadSection = (_ section: Int) -> Void
 public typealias ValueConfigurationClosure = (Int, String) -> String
 public typealias CellConfigurationClosure = (Int, String, AnyObject?, NestedSpinnerCell) -> Void
