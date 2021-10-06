@@ -15,31 +15,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNestedSpinner()
-    }
-
-    func setup() {
-        spinner.anchorTextFont = UIFont.boldSystemFont(ofSize: 18)
-        spinner.anchorTintColor = .darkText
-        spinner.dataSource = [Entity(""), Entity("Normal Spinner"), Entity("Nested Spinner")]
+        self.title = "Examples"
+        spinner.dataSource = [Entity("Simple Spinner"), Entity("Nested Spinner")]
         spinner.anchorOffset = CGPoint(x: 0, y: spinner.bounds.size.height)
-        spinner.selectionAction = { index, value, userdata in
-            if value.count == 0 {
-                self.spinner.anchorValue = "Please Select..."
+        spinner.selectionAction = { indexPath, value, userdata in
+            if userdata is Entity {
+                let entity = userdata as! Entity
+                switch entity.name {
+                case "Simple Spinner":
+                    self.performSegue(withIdentifier: "identifierSimpleSpinner", sender: nil)
+                    break
+                case "Nested Spinner":
+                    self.performSegue(withIdentifier: "identifierNestedSpinner", sender: nil)
+                    break
+                default:
+                    break
+                }
             }
-        }
-    }
-
-    func setupNestedSpinner() {
-        spinner.anchorTextFont = UIFont.boldSystemFont(ofSize: 18)
-        spinner.anchorTintColor = .darkText
-        
-        let groupItem1 = NestedSpinnerItem("Normal Spinner", [Entity("Style 1"), Entity("Style 2"), Entity("Style 3")])
-        let groupItem2 = NestedSpinnerItem("Nested Spinner", [Entity("Style 1"), Entity("Style 2"), Entity("Style 3")])
-        spinner.dataTrees = [groupItem1, groupItem2]
-        spinner.anchorOffset = CGPoint(x: 0, y: spinner.bounds.size.height)
-        spinner.selectionAction = { index, value, userdata in
-            print("selected value:\(value)")
         }
     }
     
