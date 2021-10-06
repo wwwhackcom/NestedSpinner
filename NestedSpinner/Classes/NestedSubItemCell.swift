@@ -20,8 +20,6 @@ extension NestedSubItemCell {
     
     override open func awakeFromNib() {
         super.awakeFromNib()
-        bgView.layer.cornerRadius = 5
-        bgView.backgroundColor = UIColor(red: 39.0/255.0, green: 39.0/255.0, blue: 39.0/255.0, alpha: 1)
     }
     
 }

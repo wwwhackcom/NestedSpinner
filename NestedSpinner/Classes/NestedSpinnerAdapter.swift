@@ -54,7 +54,7 @@ public class NestedSpinnerAdapter: NSObject {
 extension NestedSpinnerAdapter: UITableViewDataSource, UITableViewDelegate {
     
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return dataTreesCount;
+        return dataTreesCount
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -70,11 +70,13 @@ extension NestedSpinnerAdapter: UITableViewDataSource, UITableViewDelegate {
     public func configureSection(_ header: NestedGroupItemCell, at section: Int) {
         header.tintColor = style.tableViewBackgroundColor
         if !isNested {
-            return;
+            return
         }
         
         header.delegate = self
         header.section = section
+        header.bgView.layer.cornerRadius = style.sectionCornerRadius
+        header.bgView.backgroundColor = style.sectionBackgroundColor
         header.bgViewPaddingTop.constant = style.headerTopPadding
         header.bgViewHeight.constant = style.sectionHeight - 2 * style.headerTopPadding
         header.labelTitle.font = style.sectionTextFont
@@ -103,7 +105,12 @@ extension NestedSpinnerAdapter: UITableViewDataSource, UITableViewDelegate {
     public func configureCell(_ cell: NestedSpinnerCell, _ indexPath: IndexPath) {
         cell.labelTitle.font = style.cellTextFont
         cell.labelTitle.textAlignment = style.cellTextAlignment
-        cell.selectedBackgroundColor = style.selectionBackgroundColor
+        if cell is NestedSubItemCell {
+            let subItemCell = cell as! NestedSubItemCell
+            subItemCell.bgView.layer.cornerRadius = style.cellCornerRadius
+            subItemCell.bgView.backgroundColor = style.cellBackgroundColor
+        }
+        cell.selectedBackgroundColor = style.cellSelectedBackgroundColor
         cell.normalTextColor = style.cellTextColor
         cell.highlightTextColor = style.cellSelectedTextColor
         if let cellConfiguration = valueConfiguration {
@@ -133,7 +140,7 @@ extension NestedSpinnerAdapter: UITableViewDataSource, UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         var footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: NestedSpinnerConstants.PopupView.ReusableIdentifier.Footer)
-        if (footer == nil) {
+        if footer == nil {
             footer = UITableViewHeaderFooterView(reuseIdentifier: NestedSpinnerConstants.PopupView.ReusableIdentifier.Footer)
         }
         footer?.contentView.backgroundColor = style.tableViewBackgroundColor

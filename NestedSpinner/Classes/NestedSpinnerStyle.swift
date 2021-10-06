@@ -38,14 +38,20 @@ public class NestedSpinnerStyle: NSObject, InitializableClass {
     public var sectionHeight = NestedSpinnerConstants.PopupView.SectionHeight
     /// The row height of cell items
     public var rowHeight = NestedSpinnerConstants.PopupView.RowHeight
-    /// The background color of the selected cell item.
-    public var selectionBackgroundColor = NestedSpinnerConstants.PopupView.SelectionBackgroundColor
     /// The separator color between cell items
     public var separatorColor = NestedSpinnerConstants.PopupView.SeparatorColor
     /// The top padding of the header of the section
     public var headerTopPadding = NestedSpinnerConstants.PopupView.HeaderTopPadding
     /// The bottom padding of the footer of the section
     public var footerBottomPadding = NestedSpinnerConstants.PopupView.FooterBottomPadding
+    /// The corner radius of cell item
+    public var cellCornerRadius = NestedSpinnerConstants.PopupView.CellCornerRadius
+    /// The background color for each cell item
+    public var cellBackgroundColor = NestedSpinnerConstants.PopupView.CellBackgroundColor
+    /// The background color of the selected cell item.
+    public var cellSelectedBackgroundColor = NestedSpinnerConstants.PopupView.CellSelectedBackgroundColor
+    /// If need to show cell selection
+    public var showCellSelection = NestedSpinnerConstants.PopupView.ShowCellSelection
     /// The color of the text for each cell item
     public var cellTextColor = NestedSpinnerConstants.PopupView.CellTextColor
     /// The color of the text for selected cell item
@@ -54,8 +60,10 @@ public class NestedSpinnerStyle: NSObject, InitializableClass {
     public var cellTextFont = NestedSpinnerConstants.PopupView.CellTextFont
     /// The text alignment of cell item
     public var cellTextAlignment = NestedSpinnerConstants.PopupView.CellTextAlignment
-    /// if shows the cell section
-    public var showCellSelection = NestedSpinnerConstants.PopupView.ShowCellSelection
+    /// The corner radius of section item
+    public var sectionCornerRadius = NestedSpinnerConstants.PopupView.SectionCornerRadius
+    /// The background color for each section item
+    public var sectionBackgroundColor = NestedSpinnerConstants.PopupView.SectionBackgroundColor
     /// The color of the text for each section item
     public var sectionTextColor = NestedSpinnerConstants.PopupView.SectionTextColor
     /// The font of the text for each section item
@@ -91,15 +99,19 @@ public class NestedSpinnerStyle: NSObject, InitializableClass {
         shadowRadius = NestedSpinnerAppearance.globalStyle.shadowRadius
         sectionHeight = NestedSpinnerAppearance.globalStyle.sectionHeight
         rowHeight = NestedSpinnerAppearance.globalStyle.rowHeight
-        selectionBackgroundColor = NestedSpinnerAppearance.globalStyle.selectionBackgroundColor
         separatorColor = NestedSpinnerAppearance.globalStyle.separatorColor
         headerTopPadding = NestedSpinnerAppearance.globalStyle.headerTopPadding
         footerBottomPadding = NestedSpinnerAppearance.globalStyle.footerBottomPadding
+        cellCornerRadius = NestedSpinnerAppearance.globalStyle.cellCornerRadius
+        cellBackgroundColor = NestedSpinnerAppearance.globalStyle.cellBackgroundColor
+        cellSelectedBackgroundColor = NestedSpinnerAppearance.globalStyle.cellSelectedBackgroundColor
+        showCellSelection = NestedSpinnerAppearance.globalStyle.showCellSelection
         cellTextColor = NestedSpinnerAppearance.globalStyle.cellTextColor
         cellSelectedTextColor = NestedSpinnerAppearance.globalStyle.cellSelectedTextColor
         cellTextFont = NestedSpinnerAppearance.globalStyle.cellTextFont
         cellTextAlignment = NestedSpinnerAppearance.globalStyle.cellTextAlignment
-        showCellSelection = NestedSpinnerAppearance.globalStyle.showCellSelection
+        sectionCornerRadius = NestedSpinnerAppearance.globalStyle.sectionCornerRadius
+        sectionBackgroundColor = NestedSpinnerAppearance.globalStyle.sectionBackgroundColor
         sectionTextColor = NestedSpinnerAppearance.globalStyle.sectionTextColor
         sectionTextFont = NestedSpinnerAppearance.globalStyle.sectionTextFont
         animationduration = NestedSpinnerAppearance.globalStyle.animationduration
