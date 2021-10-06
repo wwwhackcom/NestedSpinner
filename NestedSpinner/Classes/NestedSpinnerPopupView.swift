@@ -223,6 +223,9 @@ extension NestedSpinnerPopupView {
         }
 
         tableView.rowHeight = style.rowHeight
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
         tableView.sectionHeaderHeight = style.sectionHeight
         setHiddenState()
         isHidden = true

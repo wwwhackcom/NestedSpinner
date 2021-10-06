@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kok-pG-eCz">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTL-a6-HQ7" customClass="NestedSpinnerView" customModule="NestedSpinner">
-                                <rect key="frame" x="66" y="104" width="258" height="50"/>
+                                <rect key="frame" x="66" y="148" width="258" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="L9Z-B4-0uZ"/>
@@ -35,13 +35,131 @@
                             <constraint firstItem="XTL-a6-HQ7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="zWH-FN-l6r"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="H9Q-p6-u3Q"/>
                     <connections>
                         <outlet property="spinner" destination="XTL-a6-HQ7" id="6cr-hm-NPI"/>
+                        <segue destination="Znk-uf-ZU7" kind="show" identifier="identifierSimpleSpinner" id="ViF-au-XmM"/>
+                        <segue destination="dUU-cj-7cp" kind="show" identifier="identifierNestedSpinner" id="TDN-hB-B6d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="94.902548725637189"/>
+            <point key="canvasLocation" x="457" y="-358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Pd-xU-vLz">
+            <objects>
+                <navigationController interfaceStyle="light" id="Kok-pG-eCz" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E11-Nt-gtN">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="dbr-Yp-CAF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5l-Rg-C6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-254" y="-358"/>
+        </scene>
+        <!--Simple Spinner View Controller-->
+        <scene sceneID="KpV-q4-RCu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Znk-uf-ZU7" customClass="SimpleSpinnerViewController" customModule="NestedSpinner_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="58d-bI-epf"/>
+                        <viewControllerLayoutGuide type="bottom" id="l6y-6H-exk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CHf-du-R6e">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="52q-2f-iUG"/>
+                    <connections>
+                        <segue destination="Xqp-5m-pnY" kind="show" identifier="identifierCustomisedSimpleSpinner" id="6GA-vw-Iwf"/>
+                        <segue destination="2W6-Y4-1bJ" kind="show" identifier="identifierCustomisedAnchorSpinner" id="q2N-xq-oIO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmg-y5-KbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="-612"/>
+        </scene>
+        <!--Customised Simple Spinner View Controller-->
+        <scene sceneID="J9e-g6-YNe">
+            <objects>
+                <viewController id="Xqp-5m-pnY" customClass="CustomisedSimpleSpinnerViewController" customModule="NestedSpinner_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cGf-VM-nN1"/>
+                        <viewControllerLayoutGuide type="bottom" id="5wQ-0h-2MQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8RA-D5-4ge">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4l8-s2-d0S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8Y-7w-lfl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2485" y="-879"/>
+        </scene>
+        <!--Customised Spinner Anchor View Controller-->
+        <scene sceneID="Kbi-sC-fIq">
+            <objects>
+                <viewController id="2W6-Y4-1bJ" customClass="CustomisedSpinnerAnchorViewController" customModule="NestedSpinner_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hzJ-ZF-X1K"/>
+                        <viewControllerLayoutGuide type="bottom" id="fNg-Rb-WHK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u7D-pi-Yiw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6g-2n-5XH" customClass="NestedSpinnerView" customModule="NestedSpinner">
+                                <rect key="frame" x="56" y="128" width="278" height="70"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="GPF-k6-hf4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K6g-2n-5XH" firstAttribute="leading" secondItem="u7D-pi-Yiw" secondAttribute="leadingMargin" constant="40" id="28v-lP-Shx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K6g-2n-5XH" secondAttribute="trailing" constant="40" id="5fo-YN-0UV"/>
+                            <constraint firstItem="K6g-2n-5XH" firstAttribute="top" secondItem="hzJ-ZF-X1K" secondAttribute="bottom" constant="40" id="FXY-IO-fc5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e9r-kz-Xuz"/>
+                    <connections>
+                        <outlet property="spinner" destination="K6g-2n-5XH" id="2ed-fi-5xI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MuW-8B-eQq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2528" y="-228"/>
+        </scene>
+        <!--Nested Spinner View Controller-->
+        <scene sceneID="6pI-Ga-ScS">
+            <objects>
+                <viewController id="dUU-cj-7cp" customClass="NestedSpinnerViewController" customModule="NestedSpinner_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="42j-Dw-ncq"/>
+                        <viewControllerLayoutGuide type="bottom" id="OhK-fR-SHl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7bh-if-ssr">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PQi-ou-qHf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVy-MX-f99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1371" y="154"/>
         </scene>
     </scenes>
     <resources>

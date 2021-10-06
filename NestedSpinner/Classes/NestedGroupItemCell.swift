@@ -43,8 +43,6 @@ extension NestedGroupItemCell {
     override open func awakeFromNib() {
         super.awakeFromNib()
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapHeader)))
-        bgView.layer.cornerRadius = 5
-        bgView.backgroundColor = UIColor(red: 39.0/255.0, green: 39.0/255.0, blue: 39.0/255.0, alpha: 1)
     }
     
     @objc private func didTapHeader() {

@@ -102,6 +102,9 @@ extension NestedSpinnerView {
     @objc public var selectedItem: AnyObject? {
         return popupView.selectedItem
     }
+    @objc public func reload() {
+        popupView.reloadAllComponents()
+    }
     
 }
 

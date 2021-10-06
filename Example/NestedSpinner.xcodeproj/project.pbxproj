@@ -17,6 +17,10 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		A16D6B80C73CCCA910E2FA21 /* Pods_NestedSpinner_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4008D06B46568850A99B9D39 /* Pods_NestedSpinner_Example.framework */; };
 		BB8CEB05F16AFF1157D893AB /* Pods_NestedSpinner_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB0F9FA510D58333B597CA1 /* Pods_NestedSpinner_Tests.framework */; };
+		D7EB3B6326FBEA0100740294 /* SimpleSpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EB3B6126FBEA0100740294 /* SimpleSpinnerViewController.swift */; };
+		D7EB3B6426FBEA0100740294 /* NestedSpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EB3B6226FBEA0100740294 /* NestedSpinnerViewController.swift */; };
+		D7ED3042270CF03800758B15 /* CustomisedSpinnerAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED3041270CF03800758B15 /* CustomisedSpinnerAnchorViewController.swift */; };
+		D7EF22A826FD6A75004E3A6D /* CustomisedSimpleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EF22A726FD6A75004E3A6D /* CustomisedSimpleSpinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		7A0FB7084A5206098502D2F2 /* NestedSpinner.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NestedSpinner.podspec; path = ../NestedSpinner.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8204E5B670D3A6799BF380F0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8C3D9F49E4378DA89E114ACF /* Pods-NestedSpinner_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedSpinner_Tests.debug.xcconfig"; path = "Target Support Files/Pods-NestedSpinner_Tests/Pods-NestedSpinner_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7EB3B6126FBEA0100740294 /* SimpleSpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleSpinnerViewController.swift; path = Style/SimpleSpinnerViewController.swift; sourceTree = "<group>"; };
+		D7EB3B6226FBEA0100740294 /* NestedSpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NestedSpinnerViewController.swift; path = Style/NestedSpinnerViewController.swift; sourceTree = "<group>"; };
+		D7ED3041270CF03800758B15 /* CustomisedSpinnerAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomisedSpinnerAnchorViewController.swift; path = Style/CustomisedSpinnerAnchorViewController.swift; sourceTree = "<group>"; };
+		D7EF22A726FD6A75004E3A6D /* CustomisedSimpleSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomisedSimpleSpinner.swift; path = Style/CustomisedSimpleSpinner.swift; sourceTree = "<group>"; };
 		DB4E944A43BA39348BC37590 /* Pods-NestedSpinner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedSpinner_Example.debug.xcconfig"; path = "Target Support Files/Pods-NestedSpinner_Example/Pods-NestedSpinner_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +109,10 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				D7EB3B6126FBEA0100740294 /* SimpleSpinnerViewController.swift */,
+				D7EF22A726FD6A75004E3A6D /* CustomisedSimpleSpinner.swift */,
+				D7ED3041270CF03800758B15 /* CustomisedSpinnerAnchorViewController.swift */,
+				D7EB3B6226FBEA0100740294 /* NestedSpinnerViewController.swift */,
 				133461162685EEAA0084327F /* NestedSpinnerAppearance+Extension.swift */,
 				13CC547726874345002F223C /* Entity.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -223,6 +235,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -342,9 +355,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				13CC547826874345002F223C /* Entity.swift in Sources */,
+				D7EB3B6326FBEA0100740294 /* SimpleSpinnerViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				133461172685EEAA0084327F /* NestedSpinnerAppearance+Extension.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				D7EB3B6426FBEA0100740294 /* NestedSpinnerViewController.swift in Sources */,
+				D7EF22A826FD6A75004E3A6D /* CustomisedSimpleSpinner.swift in Sources */,
+				D7ED3042270CF03800758B15 /* CustomisedSpinnerAnchorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,12 +517,16 @@
 			baseConfigurationReference = DB4E944A43BA39348BC37590 /* Pods-NestedSpinner_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NestedSpinner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickwang.NestedSpinnerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -516,12 +537,16 @@
 			baseConfigurationReference = 2B50F0A4CC193A8F11FF3DB8 /* Pods-NestedSpinner_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NestedSpinner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickwang.NestedSpinnerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -531,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8C3D9F49E4378DA89E114ACF /* Pods-NestedSpinner_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -553,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 345AEF5BE5A2AAFE25CB4187 /* Pods-NestedSpinner_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -60,10 +60,28 @@ open class NestedSpinnerAnchorView : UIView {
         willSet { labelValue.font = newValue }
     }
     
-    @objc @IBInspectable public dynamic var accessoryImage = NestedSpinnerConstants.AnchorView.AccessoryImage {
+    @objc @IBInspectable public dynamic var anchorAccessoryImage = NestedSpinnerConstants.AnchorView.AccessoryImage {
         willSet {
             let tintableImage = newValue?.withRenderingMode(.alwaysTemplate)
             ivAccessory.image = tintableImage
+        }
+    }
+    
+    @objc public dynamic var anchorPadding: CGFloat = 4.0 {
+        didSet {
+            updateConstraint()
+        }
+    }
+    
+    @objc public dynamic var anchorImageSize: CGFloat = 22.0 {
+        didSet {
+            updateConstraint()
+        }
+    }
+    
+    @objc public dynamic var anchorTextAlignment: NSTextAlignment = .left {
+        willSet {
+            labelValue.textAlignment = newValue
         }
     }
     
@@ -72,7 +90,9 @@ open class NestedSpinnerAnchorView : UIView {
     //MARK: - private
     private let labelValue = UILabel()
     private let ivAccessory = UIImageView()
-    
+    private var hLayoutConstraint: [NSLayoutConstraint]?
+    private var vLayoutConstraint: [NSLayoutConstraint]?
+
 }
 
 //MARK: - UI
@@ -84,20 +104,33 @@ extension NestedSpinnerAnchorView {
         isUserInteractionEnabled = true
         labelValue.translatesAutoresizingMaskIntoConstraints = false
         ivAccessory.translatesAutoresizingMaskIntoConstraints = false
-        let tintableImage = accessoryImage?.withRenderingMode(.alwaysTemplate)
+        let tintableImage = anchorAccessoryImage?.withRenderingMode(.alwaysTemplate)
         ivAccessory.image = tintableImage
         ivAccessory.tintColor = anchorTintColor
         addSubview(labelValue)
         addSubview(ivAccessory)
-        
-        let metric = ["space": 4]
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-space-[labelValue]-space-[ivAccessory(22)]-space-|", options: NSLayoutConstraint.FormatOptions(), metrics: metric, views: ["labelValue" : labelValue, "ivAccessory" : ivAccessory]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-space-[labelValue]-space-|", options: NSLayoutConstraint.FormatOptions(), metrics: metric, views: ["labelValue" : labelValue]))
-        ivAccessory.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        ivAccessory.heightAnchor.constraint(equalToConstant: 22).isActive = true
+        updateConstraint()
         labelValue.text = "Select..."
         labelValue.textColor = anchorTintColor
         labelValue.font = anchorTextFont
+    }
+    
+    private func updateConstraint() {
+        if hLayoutConstraint != nil {
+            removeConstraints(hLayoutConstraint!)
+        }
+        if vLayoutConstraint != nil {
+            removeConstraints(vLayoutConstraint!)
+        }
+        
+        let metric = ["space": anchorPadding, "imageSize": anchorImageSize]
+        hLayoutConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|-space-[labelValue]-2-[ivAccessory(imageSize)]-space-|", options: NSLayoutConstraint.FormatOptions(), metrics: metric, views: ["labelValue" : labelValue, "ivAccessory" : ivAccessory])
+        addConstraints(hLayoutConstraint!)
+        vLayoutConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|-space-[labelValue]-space-|", options: NSLayoutConstraint.FormatOptions(), metrics: metric, views: ["labelValue" : labelValue])
+        addConstraints(vLayoutConstraint!)
+        ivAccessory.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        ivAccessory.heightAnchor.constraint(equalTo: ivAccessory.widthAnchor, multiplier: 1.0).isActive = true
+        setNeedsUpdateConstraints()
     }
     
     @objc private func tapAnchorView(_ sender: UITapGestureRecognizer) {
