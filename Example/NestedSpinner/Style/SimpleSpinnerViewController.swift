@@ -24,7 +24,7 @@ class SimpleSpinnerViewController: UIViewController {
         spinner = NestedSpinnerView(frame: CGRect(x: 50, y: 160, width: self.view.bounds.width - 100, height: 50))
         spinner.anchorTextFont = UIFont.boldSystemFont(ofSize: 18)
         spinner.anchorTintColor = .darkText
-        spinner.dataSource = [Entity("Light Style"), Entity("Dark Style"), Entity("Customised Globally"), Entity("Customised Attributes", 1), Entity("Customised AnchorView", 2)]
+        spinner.dataSource = [Entity("Light Style"), Entity("Dark Style"), Entity("Customised Globally"), Entity("Customised Attributes", 1), Entity("Customised AnchorView", 2), Entity("Customised Cell", 3), Entity("Customised Xib", 4)]
         spinner.anchorOffset = CGPoint(x: 0, y: spinner.bounds.size.height)
         spinner.selectionAction = { indexPath, value, userdata in
             if userdata is Entity {
@@ -40,6 +40,12 @@ class SimpleSpinnerViewController: UIViewController {
                         break
                     case 2:
                         self.performSegue(withIdentifier: "identifierCustomisedAnchorSpinner", sender: nil)
+                        break
+                    case 3:
+                        self.performSegue(withIdentifier: "identifierCustomisedCell", sender: nil)
+                        break
+                    case 4:
+                        //self.performSegue(withIdentifier: "identifierCustomisedCellXib", sender: nil)
                         break
                     default:
                         break
