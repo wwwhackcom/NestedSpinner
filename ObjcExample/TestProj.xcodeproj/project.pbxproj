@@ -16,6 +16,10 @@
 		13FF307F26899A5600F054D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FF307E26899A5600F054D4 /* main.m */; };
 		13FF308A2689DD9000F054D4 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FF30892689DD9000F054D4 /* Entity.swift */; };
 		13FF30932689EEB500F054D4 /* NestedSpinnerAppearance+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FF30922689EEB500F054D4 /* NestedSpinnerAppearance+Extension.swift */; };
+		D78FD9E5270D3F6B0036F74C /* SimpleSpinnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78FD9E4270D3F6B0036F74C /* SimpleSpinnerViewController.m */; };
+		D78FD9E9270D48250036F74C /* CustomisedSimpleSpinnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78FD9E8270D48250036F74C /* CustomisedSimpleSpinnerViewController.m */; };
+		D78FD9EC270D4BCF0036F74C /* CustomisedSpinnerAnchorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78FD9EB270D4BCF0036F74C /* CustomisedSpinnerAnchorViewController.m */; };
+		D78FD9EF270D52FA0036F74C /* NestedSpinnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78FD9EE270D52FA0036F74C /* NestedSpinnerViewController.m */; };
 		F21A1DF2A05CC20D4D2C9C49 /* libPods-TestProj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABF95AA62199C51502B8C31 /* libPods-TestProj.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +46,14 @@
 		3ABF95AA62199C51502B8C31 /* libPods-TestProj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestProj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7544AF09A4D8686B94BE7BFF /* Pods-TestProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProj.debug.xcconfig"; path = "Target Support Files/Pods-TestProj/Pods-TestProj.debug.xcconfig"; sourceTree = "<group>"; };
 		B0C3132FDE3595FDEC39DD11 /* Pods-TestProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProj.release.xcconfig"; path = "Target Support Files/Pods-TestProj/Pods-TestProj.release.xcconfig"; sourceTree = "<group>"; };
+		D78FD9E3270D3F6B0036F74C /* SimpleSpinnerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SimpleSpinnerViewController.h; path = style/SimpleSpinnerViewController.h; sourceTree = "<group>"; };
+		D78FD9E4270D3F6B0036F74C /* SimpleSpinnerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SimpleSpinnerViewController.m; path = style/SimpleSpinnerViewController.m; sourceTree = "<group>"; };
+		D78FD9E7270D48250036F74C /* CustomisedSimpleSpinnerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CustomisedSimpleSpinnerViewController.h; path = style/CustomisedSimpleSpinnerViewController.h; sourceTree = "<group>"; };
+		D78FD9E8270D48250036F74C /* CustomisedSimpleSpinnerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CustomisedSimpleSpinnerViewController.m; path = style/CustomisedSimpleSpinnerViewController.m; sourceTree = "<group>"; };
+		D78FD9EA270D4BCF0036F74C /* CustomisedSpinnerAnchorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CustomisedSpinnerAnchorViewController.h; path = style/CustomisedSpinnerAnchorViewController.h; sourceTree = "<group>"; };
+		D78FD9EB270D4BCF0036F74C /* CustomisedSpinnerAnchorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CustomisedSpinnerAnchorViewController.m; path = style/CustomisedSpinnerAnchorViewController.m; sourceTree = "<group>"; };
+		D78FD9ED270D52FA0036F74C /* NestedSpinnerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NestedSpinnerViewController.h; path = style/NestedSpinnerViewController.h; sourceTree = "<group>"; };
+		D78FD9EE270D52FA0036F74C /* NestedSpinnerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NestedSpinnerViewController.m; path = style/NestedSpinnerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,16 @@
 				13FF307026899A4B00F054D4 /* SceneDelegate.m */,
 				13FF307226899A4B00F054D4 /* ViewController.h */,
 				13FF307326899A4B00F054D4 /* ViewController.m */,
+				D78FD9E3270D3F6B0036F74C /* SimpleSpinnerViewController.h */,
+				D78FD9E4270D3F6B0036F74C /* SimpleSpinnerViewController.m */,
+				D78FD9E7270D48250036F74C /* CustomisedSimpleSpinnerViewController.h */,
+				D78FD9E8270D48250036F74C /* CustomisedSimpleSpinnerViewController.m */,
+				D78FD9EA270D4BCF0036F74C /* CustomisedSpinnerAnchorViewController.h */,
+				D78FD9EB270D4BCF0036F74C /* CustomisedSpinnerAnchorViewController.m */,
+				D78FD9ED270D52FA0036F74C /* NestedSpinnerViewController.h */,
+				D78FD9EE270D52FA0036F74C /* NestedSpinnerViewController.m */,
+				13FF30922689EEB500F054D4 /* NestedSpinnerAppearance+Extension.swift */,
+				13FF30892689DD9000F054D4 /* Entity.swift */,
 				13FF307526899A4B00F054D4 /* Main.storyboard */,
 				13FF307826899A5600F054D4 /* Assets.xcassets */,
 				13FF307A26899A5600F054D4 /* LaunchScreen.storyboard */,
@@ -90,8 +112,6 @@
 				13FF307E26899A5600F054D4 /* main.m */,
 				13FF30852689C43B00F054D4 /* TestProj-Bridging-Header.h */,
 				13FF30882689C52100F054D4 /* Prefix.pch */,
-				13FF30892689DD9000F054D4 /* Entity.swift */,
-				13FF30922689EEB500F054D4 /* NestedSpinnerAppearance+Extension.swift */,
 			);
 			path = TestProj;
 			sourceTree = "<group>";
@@ -213,8 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				13FF307426899A4B00F054D4 /* ViewController.m in Sources */,
+				D78FD9EF270D52FA0036F74C /* NestedSpinnerViewController.m in Sources */,
 				13FF30932689EEB500F054D4 /* NestedSpinnerAppearance+Extension.swift in Sources */,
+				D78FD9EC270D4BCF0036F74C /* CustomisedSpinnerAnchorViewController.m in Sources */,
+				D78FD9E9270D48250036F74C /* CustomisedSimpleSpinnerViewController.m in Sources */,
 				13FF308A2689DD9000F054D4 /* Entity.swift in Sources */,
+				D78FD9E5270D3F6B0036F74C /* SimpleSpinnerViewController.m in Sources */,
 				13FF306E26899A4B00F054D4 /* AppDelegate.m in Sources */,
 				13FF307F26899A5600F054D4 /* main.m in Sources */,
 				13FF307126899A4B00F054D4 /* SceneDelegate.m in Sources */,
@@ -364,7 +388,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QR4GJ655HU;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = TestProj/Prefix.pch;
 				INFOPLIST_FILE = TestProj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -389,7 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QR4GJ655HU;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = TestProj/Prefix.pch;
 				INFOPLIST_FILE = TestProj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;

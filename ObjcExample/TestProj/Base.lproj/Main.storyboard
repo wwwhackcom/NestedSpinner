@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="62J-cZ-AIa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="eTP-bS-qBh">
+            <objects>
+                <navigationController id="62J-cZ-AIa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="whT-q6-2bA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CxL-lg-RHG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Spr-DV-FiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490" y="65"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -16,29 +33,117 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPt-mf-4QM" customClass="NestedSpinnerView" customModule="NestedSpinner">
-                                <rect key="frame" x="50" y="104" width="314" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGU-3O-F2O" customClass="NestedSpinnerView" customModule="NestedSpinner">
+                                <rect key="frame" x="50" y="148" width="314" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Vfa-Hi-6na"/>
+                                    <constraint firstAttribute="height" constant="50" id="yPd-9Y-tbM"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cPt-mf-4QM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Lyv-dW-c3M"/>
-                            <constraint firstItem="cPt-mf-4QM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="sHY-iy-3Xv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cPt-mf-4QM" secondAttribute="trailing" constant="50" id="xiG-hz-9zz"/>
+                            <constraint firstItem="DGU-3O-F2O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="FfP-8K-zcq"/>
+                            <constraint firstItem="DGU-3O-F2O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="lp2-AU-nYy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DGU-3O-F2O" secondAttribute="trailing" constant="50" id="wwC-MK-gZT"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jLn-AH-3hc"/>
                     <connections>
-                        <outlet property="spinner" destination="cPt-mf-4QM" id="dJs-iV-R37"/>
+                        <outlet property="spinner" destination="DGU-3O-F2O" id="Yaa-rU-DhT"/>
+                        <segue destination="M1B-25-HCQ" kind="show" identifier="identifierSimpleSpinner" id="oWg-Ch-yLU"/>
+                        <segue destination="JFY-DM-wbF" kind="show" identifier="identifierNestedSpinner" id="LcT-v1-8fq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="76"/>
+            <point key="canvasLocation" x="284" y="65"/>
+        </scene>
+        <!--Simple Spinner View Controller-->
+        <scene sceneID="dWo-ce-AmM">
+            <objects>
+                <viewController id="M1B-25-HCQ" customClass="SimpleSpinnerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I0W-4L-9J4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="azf-9j-BRp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u44-iu-9WA"/>
+                    <connections>
+                        <segue destination="o7U-bT-PXk" kind="show" identifier="identifierCustomisedSimpleSpinner" id="OBb-Cm-2DC"/>
+                        <segue destination="rHw-vf-WxQ" kind="show" identifier="identifierCustomisedAnchorSpinner" id="7gM-lW-u8V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqY-B2-9oX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1067" y="-240"/>
+        </scene>
+        <!--Customised Simple Spinner View Controller-->
+        <scene sceneID="UhJ-TK-ZM4">
+            <objects>
+                <viewController id="o7U-bT-PXk" customClass="CustomisedSimpleSpinnerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7W8-g1-uqg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TaC-gN-EOv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="crQ-i6-1XV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="luk-mq-PjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1851" y="-582"/>
+        </scene>
+        <!--Nested Spinner View Controller-->
+        <scene sceneID="qd1-vN-KXz">
+            <objects>
+                <viewController id="JFY-DM-wbF" customClass="NestedSpinnerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vl0-Yg-DX1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="W3x-mc-6vw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZqL-s8-DJs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qDI-5b-seV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="443"/>
+        </scene>
+        <!--Customised Spinner Anchor View Controller-->
+        <scene sceneID="lgU-d3-SWJ">
+            <objects>
+                <viewController id="rHw-vf-WxQ" customClass="CustomisedSpinnerAnchorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lqA-Ou-Ygg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9GK-EU-Lmo" customClass="NestedSpinnerView" customModule="NestedSpinner">
+                                <rect key="frame" x="40" y="128" width="334" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="8ib-eI-6Qb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WGb-V3-xcS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WGb-V3-xcS" firstAttribute="trailing" secondItem="9GK-EU-Lmo" secondAttribute="trailing" constant="40" id="1n4-Z3-3gr"/>
+                            <constraint firstItem="9GK-EU-Lmo" firstAttribute="top" secondItem="WGb-V3-xcS" secondAttribute="top" constant="40" id="JGW-6y-OB2"/>
+                            <constraint firstItem="9GK-EU-Lmo" firstAttribute="leading" secondItem="WGb-V3-xcS" secondAttribute="leading" constant="40" id="SwP-bU-AQH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wuZ-g4-F9g"/>
+                    <connections>
+                        <outlet property="spinner" destination="9GK-EU-Lmo" id="QJv-kq-ju3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERP-iC-jt5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1851" y="98"/>
         </scene>
     </scenes>
     <resources>

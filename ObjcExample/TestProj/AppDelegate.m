@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [NestedSpinnerAppearance customisedStyle];
+    //[NestedSpinnerAppearance customisedStyle];
     return YES;
 }
 
