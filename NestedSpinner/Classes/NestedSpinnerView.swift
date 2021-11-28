@@ -30,8 +30,8 @@ open class NestedSpinnerView: NestedSpinnerAnchorView {
     @objc public var selectionAction: SelectionAction?
     @objc public var cancelAction: CancelAction?
     @objc public var cellConfiguration: ValueConfigurationClosure?
-    @objc public var customCellConfiguration: CellConfigurationClosure?
-    @objc public var customSectionConfiguration: SectionConfigurationClosure?
+    @objc public var customisedCellConfiguration: CellConfigurationClosure?
+    @objc public var customisedSectionConfiguration: SectionConfigurationClosure?
     
     @objc public weak var anchorView: AnchorView? {
         willSet {
@@ -127,11 +127,11 @@ extension NestedSpinnerView {
         popupView.valueConfiguration = { index, value in
             return self.cellConfiguration?(index, value) ?? value
         }
-        popupView.customSectionConfiguration = { section, value, groupItem, sectionView in
-            self.customSectionConfiguration?(section, value, groupItem, sectionView)
+        popupView.customisedSectionConfiguration = { section, value, groupItem, sectionView in
+            self.customisedSectionConfiguration?(section, value, groupItem, sectionView)
         }
-        popupView.customCellConfiguration = { index, value, userdata, cell in
-            self.customCellConfiguration?(index, value, userdata, cell)
+        popupView.customisedCellConfiguration = { index, value, userdata, cell in
+            self.customisedCellConfiguration?(index, value, userdata, cell)
         }
         clickAction = {
             self.popupView.show()

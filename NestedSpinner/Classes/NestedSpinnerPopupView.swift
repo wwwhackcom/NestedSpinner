@@ -61,13 +61,13 @@ public final class NestedSpinnerPopupView: UIView {
         get { return dataAdapter.valueConfiguration }
         set { dataAdapter.valueConfiguration = newValue }
     }
-    public var customSectionConfiguration: SectionConfigurationClosure? {
-        get { return dataAdapter.customSectionConfiguration }
-        set { dataAdapter.customSectionConfiguration = newValue }
+    public var customisedSectionConfiguration: SectionConfigurationClosure? {
+        get { return dataAdapter.customisedSectionConfiguration }
+        set { dataAdapter.customisedSectionConfiguration = newValue }
     }
-    public var customCellConfiguration: CellConfigurationClosure? {
-        get { return dataAdapter.customCellConfiguration }
-        set { dataAdapter.customCellConfiguration = newValue }
+    public var customisedCellConfiguration: CellConfigurationClosure? {
+        get { return dataAdapter.customisedCellConfiguration }
+        set { dataAdapter.customisedCellConfiguration = newValue }
     }
     public var style = NestedSpinnerStyle(global: true)
     

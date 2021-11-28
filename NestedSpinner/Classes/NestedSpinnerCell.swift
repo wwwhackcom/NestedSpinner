@@ -8,9 +8,13 @@
 
 import UIKit
 
+@objc(NestedSpinnerCell)
 open class NestedSpinnerCell: UITableViewCell {
         
     @IBOutlet open weak var labelTitle: UILabel!
+    @IBOutlet open weak var ivLeft: UIImageView!
+    @IBOutlet open weak var ivLeftAspectRatio: NSLayoutConstraint!
+    
     var selectedBackgroundColor: UIColor?
     var highlightTextColor: UIColor?
     var normalTextColor: UIColor?

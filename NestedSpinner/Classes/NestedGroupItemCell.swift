@@ -12,6 +12,7 @@ protocol NestedGroupItemCellDelegate: AnyObject {
     func toggleSection(header: NestedGroupItemCell, section: Int)
 }
 
+@objc(NestedGroupItemCell)
 open class NestedGroupItemCell: UITableViewHeaderFooterView {
     
     
