@@ -101,7 +101,7 @@ NestedSpinner have two built-in styles, Light and Dark. It can also set gloable 
 </div>
 
 ### Customization
-1. Customise your own anchor view, please look at the examples  `CustomisedSpinnerAnchorViewController`(https://github.com/wwwhackcom/NestedSpinner/blob/master/NestedSpinner/Classes/CustomisedSpinnerAnchorViewController.swift)
+1. Customise your own anchor view, please look at the examples  `CustomisedSpinnerAnchorViewController`(https://github.com/wwwhackcom/NestedSpinner/blob/master/Example/NestedSpinner/Style/CustomisedSpinnerAnchorViewController.swift)
 
 <div align="center">
   <a href="https://github.com/wwwhackcom/CustomisedAnchor">
