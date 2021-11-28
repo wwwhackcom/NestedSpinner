@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kok-pG-eCz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kok-pG-eCz">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,6 +81,7 @@
                     <connections>
                         <segue destination="Xqp-5m-pnY" kind="show" identifier="identifierCustomisedSimpleSpinner" id="6GA-vw-Iwf"/>
                         <segue destination="2W6-Y4-1bJ" kind="show" identifier="identifierCustomisedAnchorSpinner" id="q2N-xq-oIO"/>
+                        <segue destination="aK5-bZ-k5b" kind="show" identifier="identifierCustomisedCell" id="h6u-Iy-eFw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmg-y5-KbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -105,6 +106,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8Y-7w-lfl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2485" y="-879"/>
+        </scene>
+        <!--Simple Sinner Cell View Controller-->
+        <scene sceneID="6B4-rm-SWH">
+            <objects>
+                <viewController id="aK5-bZ-k5b" customClass="SimpleSinnerCellViewController" customModule="NestedSpinner_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rGW-mC-1Cg"/>
+                        <viewControllerLayoutGuide type="bottom" id="SX9-DR-ZX5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SxO-kr-TSz">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XqG-O2-zgZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p1Y-KL-OV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3291" y="-879"/>
         </scene>
         <!--Customised Spinner Anchor View Controller-->
         <scene sceneID="Kbi-sC-fIq">

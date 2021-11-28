@@ -33,8 +33,8 @@ public class NestedSpinnerAdapter: NSObject {
     }
     
     public var valueConfiguration: ValueConfigurationClosure?
-    public var customSectionConfiguration: SectionConfigurationClosure?
-    public var customCellConfiguration: CellConfigurationClosure?
+    public var customisedSectionConfiguration: SectionConfigurationClosure?
+    public var customisedCellConfiguration: CellConfigurationClosure?
     public var selectionAction: SelectionAction?
     public var reloadSections: ReloadSection?
     
@@ -85,7 +85,7 @@ extension NestedSpinnerAdapter: UITableViewDataSource, UITableViewDelegate {
         header.groupItem = getGroupItem(section)!
         
         let value = header.groupItem?.groupItemTitle ?? ""
-        customSectionConfiguration?(section, value, header.groupItem, header)
+        customisedSectionConfiguration?(section, value, header.groupItem, header)
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -118,8 +118,17 @@ extension NestedSpinnerAdapter: UITableViewDataSource, UITableViewDelegate {
         } else {
             cell.labelTitle.text = getSubItemTitle(indexPath)
         }
+
+        if cell.ivLeft != nil {
+            cell.ivLeft.image = getSubItemImage(indexPath)
+            if cell.ivLeft.image == nil {
+                cell.ivLeftAspectRatio = cell.ivLeftAspectRatio.updateMultiplier(0.0)
+            } else {
+                cell.ivLeftAspectRatio = cell.ivLeftAspectRatio.updateMultiplier(1.0)
+            }
+        }
         
-        customCellConfiguration?(indexPath.row, getSubItemTitle(indexPath), getSubItem(indexPath), cell)
+        customisedCellConfiguration?(indexPath.row, getSubItemTitle(indexPath), getSubItem(indexPath), cell)
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -174,6 +183,16 @@ extension NestedSpinnerAdapter {
         } else {
             guard let subItem = dataSource?[indexPath.row] as? NestedSpinnerDataSource else { return "" }
             return subItem.getTitle()
+        }
+    }
+    
+    private func getSubItemImage(_ indexPath: IndexPath) -> UIImage? {
+        if isNested {
+            let subItem = dataTreesSubItem(indexPath)
+            return subItem?.getSubLeftImage?() ?? nil
+        } else {
+            guard let subItem = dataSource?[indexPath.row] as? NestedSpinnerDataSource else { return nil }
+            return subItem.getLeftImage?()
         }
     }
     

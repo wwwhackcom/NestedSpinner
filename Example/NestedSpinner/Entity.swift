@@ -15,20 +15,26 @@ class Entity: NestedSpinnerDataSource, NestedSpinnerSubItem {
     var data: Int?
     var backgroundColour: String?
     var textColour: String?
+    var image: UIImage?
     
     convenience init(_ name: String) {
-        self.init(name, nil, nil, nil)
+        self.init(name, nil, nil, nil, nil)
+    }
+    
+    convenience init(_ name: String, _ image: UIImage?) {
+        self.init(name, nil, nil, nil, image)
     }
     
     convenience init(_ name: String, _ data: Int?) {
-        self.init(name, data, nil, nil)
+        self.init(name, data, nil, nil, nil)
     }
     
-    init(_ name: String, _ data: Int?, _ backgroundColour: String?, _ textColour: String?) {
+    init(_ name: String, _ data: Int?, _ backgroundColour: String?, _ textColour: String?, _ image: UIImage?) {
         self.name = name
         self.data = data
         self.backgroundColour = backgroundColour
         self.textColour = textColour
+        self.image = image
     }
     
     func getTitle() -> String {
@@ -37,6 +43,10 @@ class Entity: NestedSpinnerDataSource, NestedSpinnerSubItem {
     
     func getSubTitle() -> String {
         return name
+    }
+    
+    func getLeftImage() -> UIImage? {
+        return image
     }
     
 }

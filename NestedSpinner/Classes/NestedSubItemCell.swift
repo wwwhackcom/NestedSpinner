@@ -8,11 +8,13 @@
 
 import UIKit
 
+@objc(NestedSubItemCell)
 open class NestedSubItemCell : NestedSpinnerCell {
     
     @IBOutlet public weak var bgView: UIView!
     @IBOutlet weak var bgViewPaddingTop: NSLayoutConstraint!
     @IBOutlet weak var bgViewPaddingBottom: NSLayoutConstraint!
+    
 }
 
 //MARK: - UI

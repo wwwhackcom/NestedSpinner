@@ -28,9 +28,11 @@ class CustomisedSimpleSpinnerViewController: UIViewController {
         spinner.style.cellSelectedBackgroundColor = UIColor(red: 0.0, green: 1.0, blue: 1.0, alpha: 0.3)
         spinner.style.cellTextColor = .white
         spinner.style.cellSelectedTextColor = .white
+        spinner.style.cellTextAlignment = .left
         spinner.anchorTextFont = UIFont.boldSystemFont(ofSize: 18)
         spinner.anchorValue = "Select Language"
-        spinner.dataSource = [Entity(""), Entity("简体中文"), Entity("English"), Entity("Español"), Entity("Português"), Entity("Français")]
+        spinner.dataSource = [Entity(""), Entity("简体中文", UIImage(named: "chinese")), Entity("English", UIImage(named: "english")), Entity("Español", UIImage(named: "spanish")), Entity("Português", UIImage(named: "portuguese")), Entity("Français", UIImage(named: "french"))]
+        
         spinner.anchorOffset = CGPoint(x: 0, y: spinner.bounds.size.height)
         spinner.selectionAction = { indexPath, value, userdata in
             if userdata is Entity {

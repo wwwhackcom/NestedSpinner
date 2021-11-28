@@ -13,6 +13,8 @@ import UIKit
     
     func getTitle() -> String
     
+    @objc optional func getLeftImage() -> UIImage?
+    
 }
 
 /// Nested Spinner: Group item class
@@ -49,6 +51,8 @@ import UIKit
 @objc public protocol NestedSpinnerSubItem: AnyObject {
     
     func getSubTitle() -> String
+    
+    @objc optional func getSubLeftImage() -> UIImage?
     
 }
 
@@ -106,5 +110,27 @@ public extension DispatchQueue {
         } else {
             main.async(execute: closure)
         }
+    }
+}
+
+extension NSLayoutConstraint {
+    
+    func updateMultiplier(_ multiplier: CGFloat) -> NSLayoutConstraint {
+        NSLayoutConstraint.deactivate([self])
+        let newConstraint = NSLayoutConstraint(
+            item: firstItem!,
+            attribute: firstAttribute,
+            relatedBy: relation,
+            toItem: secondItem,
+            attribute: secondAttribute,
+            multiplier: multiplier,
+            constant: constant)
+
+        newConstraint.priority = priority
+        newConstraint.shouldBeArchived = self.shouldBeArchived
+        newConstraint.identifier = self.identifier
+
+        NSLayoutConstraint.activate([newConstraint])
+        return newConstraint
     }
 }
